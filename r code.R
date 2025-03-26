@@ -12,7 +12,7 @@ y_stat<- read.csv("Ritland_eyes_raw_FINAL.csv",header=T)
 
 
 # Getting all the active names
-names<-unique(x$Group)
+names<-unique(x_stat$Group)
 
 
 # Data untangling of 'x_stat' dataset
@@ -31,9 +31,6 @@ DataPull<-function(dyr,navn,indsæt)
   }
   return(result)
 }
-
-amph_eye<-DataPull(3,names[1],5)
-amph_weight<-DataPull(3,names[1],4)
 
 
 bird_eye<-DataPull(3,names[2],5)
@@ -94,7 +91,6 @@ for (i in 1:4782)
 #                         Data visolaztion                            #
 #######################################################################
 # Y value
-amph_div<-amph_eye/amph_weight
 bird_div<-bird_eye/bird_weight
 fish_div<-fish_eye/fish_weight
 mammal_div<-mammal_eye/mammal_weight
@@ -103,7 +99,6 @@ reptile_div<-reptile_eye/reptile_weight
 rodent_div<-rodent_eye/rodent_weight
 
 # Line 
-amph_line<-lm(amph_div~amph_eye)
 bird_line<-lm(bird_div~bird_eye)
 fish_line<-lm(fish_div~fish_eye)
 mammal_line<-lm(mammal_div~mammal_eye)
