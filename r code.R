@@ -7,8 +7,6 @@
 setwd("~/workdesk/bmb546 evo projekt")
 
 x_stat<- read.csv("Howard.csv",header=T,sep="\t")
-y_stat<- read.csv("Ritland_eyes_raw_FINAL.csv",header=T)
-
 
 
 # Getting all the active names
@@ -55,35 +53,6 @@ reptile_weight<-DataPull(3,names[6],4)
 
 rodent_eye<-DataPull(3,names[7],5)
 rodent_weight<-DataPull(3,names[7],4)
-
-
-
-# Data untangling of 'y' dataset
-aquatic_eye<-c(0,0)
-h<-1
-
-for (i in 1:4782)
-{
-  if (y_stat[i,40]=="Aquatic")
-  { 
-    aquatic_eye[h]<-y_stat[i,38]
-    h<-h+1
-  }
-}
-
-
-### fjern NA'er HER
-aquatic_weight<-c(0,0)
-h<-1
-
-for (i in 1:4782)
-{
-  if (y_stat[i,40]=="Aquatic")
-  { 
-    aquatic_weight[h]<-y_stat[i,34]
-    h<-h+1
-  }
-}
 
 
 
