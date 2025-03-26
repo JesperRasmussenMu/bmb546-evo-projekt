@@ -97,12 +97,35 @@ for (i in 1:4782)
 
 
 
+#par(mfrow=c(3,3))
+#plot(amph_weight,amph_eye)
+#plot(bird_weight,bird_eye)
+#plot(fish_weight,fish_eye)
+#plot(mammal_weight,mammal_eye)
+#plot(primate_weight,primate_eye)
+#plot(reptile_weight,reptile_eye)
+#plot(rodent_weight,rodent_eye)
+#par(mfrow=c(1,1))
+
+
+# Alternative plot
+amph_div<-amph_eye/amph_weight
+bird_div<-bird_eye/bird_weight
+fish_div<-fish_eye/fish_weight
+mammal_div<-mammal_eye/mammal_weight
+primate_div<-primate_eye/primate_weight
+reptile_div<-reptile_eye/reptile_weight
+rodent_div<-rodent_eye/rodent_weight
+x<-c(0,107)
+y<-c(0,1000)
+
 par(mfrow=c(3,3))
-plot(amph_weight,amph_eye)
-plot(bird_weight,bird_eye)
-plot(fish_weight,fish_eye)
-plot(mammal_weight,mammal_eye)
-plot(primate_weight,primate_eye)
-plot(reptile_weight,reptile_eye)
-plot(rodent_weight,rodent_eye)
+plot(amph_eye,amph_div,xlim=x,ylim=y,main="Amphibians",col="#588E47",lwd=2)
+legend('topright', legend = "r=42", bty = 'n')
+plot(bird_eye,bird_div,xlim=x,ylim=y,main="Eye axis vs. (eye axis)/(body weight)\n Birds",col="#37642A")
+plot(fish_eye,fish_div,xlim=x,ylim=y,main="Fish",col="#FDE666",lwd=2)
+plot(mammal_eye,mammal_div,xlim=x,ylim=y,main="Mammal",col="#FFCB05")
+plot(primate_eye,primate_div,xlim=x,ylim=y,main="Primate",pch = "❤",col="#DE656B")
+plot(reptile_eye,reptile_div,xlim=x,ylim=y,main="Reptile",col="#C83B55",lwd=2)
+plot(rodent_eye,rodent_div,xlim=x,ylim=y,main="Rodent",col="#171411")
 par(mfrow=c(1,1))
