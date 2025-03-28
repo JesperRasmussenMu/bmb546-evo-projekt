@@ -97,27 +97,27 @@ y<-c(0,1108)
 
 # plot
 par(mfrow=c(2,3))
-plot(bird_eye,bird_div,xlim=x,ylim=y,main="Birds",ylab="Eye axis/weight",xlab="Eye axis",col="#37642A")
+plot(bird_eye,bird_div,xlim=x,ylim=y,main="Birds",ylab="Eye axis/weight",xlab="Eye axis",pch="🦕",cex=2,col="#37642A")
 abline(bird_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =bird_rf , bty = 'n')
 
-plot(fish_eye,fish_div,xlim=x,ylim=y,ylab="Eye axis/weight",xlab="Eye axis",main="Eye axis vs. (eye axis)/(body weight)\n Fish",col="#FDE666",lwd=2)
+plot(fish_eye,fish_div,xlim=x,ylim=y,ylab="Eye axis/weight",xlab="Eye axis",pch="🦐",cex=2,main="Eye axis vs. (eye axis)/(body weight)\n Fish",col="#FDE666",lwd=2)
 abline(fish_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =fish_rf , bty = 'n')
 
-plot(mammal_eye,mammal_div,xlim=x,ylim=y,main="Mammal",ylab="Eye axis/weight",xlab="Eye axis",col="#FFCB05")
+plot(mammal_eye,mammal_div,xlim=x,ylim=y,main="Mammal",ylab="Eye axis/weight",xlab="Eye axis",pch="🕷",cex=2,col="#FFCB05")
 abline(fish_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =mammal_rf , bty = 'n')
 
-plot(primate_eye,primate_div,xlim=x,ylim=y,main="Primate",ylab="Eye axis/weight",xlab="Eye axis",pch = "❤",col="#DE656B")
+plot(primate_eye,primate_div,xlim=x,ylim=y,main="Primate",ylab="Eye axis/weight",xlab="Eye axis",pch = "🐍",cex=2,col="#DE656B")
 abline(primate_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =primate_rf , bty = 'n')
 
-plot(reptile_eye,reptile_div,xlim=x,ylim=y,main="Reptile",ylab="Eye axis/weight",xlab="Eye axis",col="#C83B55",lwd=2)
+plot(reptile_eye,reptile_div,xlim=x,ylim=y,main="Reptile",ylab="Eye axis/weight",xlab="Eye axis",pch="🦖",cex=2,col="#C83B55",lwd=2)
 abline(reptile_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =reptile_rf , bty = 'n')
 
-plot(rodent_eye,rodent_div,xlim=x,ylim=y,main="Rodent",ylab="Eye axis/weight",xlab="Eye axis",col="#171411")
+plot(rodent_eye,rodent_div,xlim=x,ylim=y,main="Rodent",ylab="Eye axis/weight",xlab="Eye axis",pch="🧍",cex=2,col="#171411")
 abline(rodent_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =rodent_rf , bty = 'n')
 par(mfrow=c(1,1))
