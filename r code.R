@@ -105,7 +105,7 @@ y<-c(0,4)
 
 # plot
 par(mfrow=c(2,3))
-plot(bird_eye,bird_divl,xlim=x,ylim=y,main="Birds",ylab="log10(eye axis / weight)",xlab="Eye axis",pch="🦕",cex=3,col="#37642A")
+plot(bird_eye,bird_divl,xlim=x,ylim=y,main="Birds",ylab="log10(eye axis / weight)",xlab="Eye axis",pch="🦕",cex=2,col="#37642A")
 abline(bird_line,lty=2,lwd=2,col="#8333a2")
 legend('topright', legend =bird_rf , bty = 'n')
 
